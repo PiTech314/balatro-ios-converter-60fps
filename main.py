@@ -45,7 +45,7 @@ def alter_code_for_ios():
         contents = f.readlines()
         for i, line in enumerate(contents):
             if "G.FPS_CAP = G.FPS_CAP or 500" in line:
-                contents[i] = line.replace("500", "120")
+                contents[i] = line.replace("500", "60")
     with open(os.path.join("balatro_files", "main.lua"), "w") as f:
         f.writelines(contents)
 
